@@ -93,12 +93,56 @@ projet
     ├── models/
     |   |
     |   ├── __init__.py     # Import des modèles pour faciliter l'accès
-    |   ├── tache.py        # Exemple de table : Tache
-    |   └── utilisateur.py  # Exemple de table : Utilisateur
+    |   ├── task.py         # Exemple de table : Tache
+    |   └── user.py         # Exemple de table : Utilisateur
     |
     └── services/
         |
         └── __init__.py     # Import des modèles pour faciliter l'accès
 ```
 
-​​​
+​​1. Créer une nouvelle branche `projecttree` et basculer sur cette branche
+    ```bash
+    git checkout -b projecttree
+    ```
+2. Créer toute l'arborescence du dossier `app` et laisser les fichiers vides
+    ```bash
+    mkdir -p app/models app/services
+    cd app
+    touch config.py db.py main.py menu.py models/__init__.py services/__init__.py
+    ```
+    Les fichiers sont vides et ce n'est pas grave. L'important est d'avoir créé la structure.
+
+    Si un dossier est vide, il suffit d'y créer un fichier `.gitkeep` pour que git prenne en compte ce dossier.
+3. Effectuer le commit de la branche. Attention! On commit bien la branche `projecttree`
+    ```bash
+    git add README.md app/
+    git commit -m "Création de la structure de l'application"
+    git push -u origin projecttree
+    ```
+4. Aller sur Github et accepter le `pull request`
+    ![Demande de pull request sur Github](docs/new_pull_resquest.png)
+
+    Dans l'écran de gestion du pull request, le bandeau ci-dessous indique :
+    - qu'il n'y a de prime abord aucun conflit
+    - que la branche `projecttree` va être fusionnée avec la branche `main`
+
+    ![alt text](docs/merge_banner.png)
+
+    Il ne reste qu'à accepter la fusion en confirmant la création du pull request
+
+    ![alt text](docs/create_pull_request.png)
+
+5. L'écran suivant (qui normalement est accessible au merge master) propose de fusionner le pull request au `main`
+
+    ![alt text](docs/merge_pull_request.png)
+
+    Après avoir cliqué sur le bouton `Merge pull request`, un nouveau beandeau s'affiche proposant de modifier le message du commit
+
+    ![alt text](docs/merge_pull_request_commit_message.png)
+
+    Modifier le message si nécessaire. Puis confirme la fusion en cliquant sur `Confirm merge`.
+
+    Un nouveau message indique que la fusion a été réalisée avec succès.
+
+    ![alt text](docs/merge_pull_request_successful.png)
