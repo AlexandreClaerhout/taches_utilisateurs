@@ -64,3 +64,41 @@
 13. Avant de clôturer cette partie, il reste une dernière chose à faire : renseigner les dossiers et/ou fichiers à écarter du dépôt git. Il faut ignorer le dossier `.venv`. Ouvrir le fichier `.gitignore` dans VSC et y ajouter le chemin du dossier `.venv`.
 
 Jusqu'à présent tous les commits ont été effectués sur la branche main. Maintenant adoptons la bonne pratique de travailler sur une branche.
+
+
+## Échafauder la structure de notre projet Python-SQLAlchemy
+
+Ci-dessous, une vue complète de l'arborescence du projet.
+
+```
+projet
+│
+├── .git
+├── .venv
+├── .gitignore
+├── LICENSE
+├── README.md
+├── requirements.txt
+├── docs/
+|   |
+|   └── Gestion d’utilisateurs et de tâches.pdf
+|
+└── app/
+    │
+    ├── config.py           # Configuration de la connexion à la base de données
+    ├── db.py               # Initialisation de l'engine et de la session SQLAlchemy
+    ├── main.py             # Application console (ajout, modification, listing, etc.)
+    ├── menu.py             # Application menu 
+    │
+    ├── models/
+    |   |
+    |   ├── __init__.py     # Import des modèles pour faciliter l'accès
+    |   ├── tache.py        # Exemple de table : Tache
+    |   └── utilisateur.py  # Exemple de table : Utilisateur
+    |
+    └── services/
+        |
+        └── __init__.py     # Import des modèles pour faciliter l'accès
+```
+
+​​​
