@@ -176,3 +176,8 @@ cython_debug/
 
 # Environnement virtuel
 .venv/
+
+# Alembic
+alembic.ini
+
+app/config/config.ini
