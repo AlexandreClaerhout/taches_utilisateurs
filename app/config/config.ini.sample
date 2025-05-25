@@ -1,0 +1,16 @@
+[connection]
+;; le nom de la base de données
+;database = 
+;; le nom d'utilisateur pour le login
+;username = 
+;; le mot de passe non chiffré
+;password = 
+;; si le port est celui par défaut, ne pas décommenter
+;port = 
+;; cela peut être un nom d'hôte, un nom de domaine ou une adresse IP
+;host = 
+;; https://docs.sqlalchemy.org/en/20/dialects/
+;dialect = 
+;driver = 
+;; O ou 1
+;debug = 0

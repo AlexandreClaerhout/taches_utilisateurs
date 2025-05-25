@@ -234,7 +234,7 @@ Afin de permettre à Python de communiquer avec la base de données Postgresql, 
     # database URL.  This is consumed by the user-maintained env.py script only.
     # other means of configuring database URLs may be customized within the env.py
     # file.
-    sqlalchemy.url = postgresql://todo_user:Alfredisthebestbutler@91.86.128.80:15432/todo
+    sqlalchemy.url = postgresql://todo_user:motdepasse@xxx.xxx.xxx.xxx:15432/todo
 ```
 
 ### Créer une révision
@@ -310,3 +310,11 @@ Dans la base de données, on constate que 2 tables y ont été créées :
 - Et la table `alembic_version` qui contient l'historique des révisions effectuées sur la db.
 
 Cette dernière table permet à `alembic` de ne pas exécuter à nouveau le même script. 
+
+## Configuration
+
+### Base de données
+
+1. Supprimer l'extension `.sample` du fichier `app/config/config.ini.sample`
+2. Décommenter les lignes à compléter et renseigner les informations requises pour la connexion à la base de données
+
